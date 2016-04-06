@@ -12,7 +12,8 @@ This is a wrapper to Camel's RouteBuilder, that allows for configurable and scri
 #Configuration
 
 - Set an 'redboxApiConfig' that points to a GroovSlurper config. It expects the config file to have at least one entry: "buildRoute", that points to a groovy script which will be used to create the routes. If you specify a "baseDir", it will be prefixed to the "buildRoute" script path. Because the configuration is in groovy, you can do things like set "baseDir" to the directory where 'redboxApiConfig' is:
-`baseDir = new File(System.getProperty('redboxApiConfig')).getParent() + '/'`
+
+   `baseDir = new File(System.getProperty('redboxApiConfig')).getParent() + '/'`
 
   When the 'buildRoute' script is executed, the following is available on its bindings:
     - routeBuilder: the Camel RouteBuilder instance used for creating routes
@@ -20,6 +21,7 @@ This is a wrapper to Camel's RouteBuilder, that allows for configurable and scri
     - log: the logging object
   
 - If you use the HTTP multipart parser, set a 'config.upload.procDir' where uploads are copied to.
+- You may also set `env` variable to control which environment the configuration system will load.
 
 #Deployment
 
@@ -29,12 +31,13 @@ Deployment options: as war file or as a fat jar. Tested with Tomcat 8. Tomcat 7 
 
 To build this project use
 
-    `mvn clean install install`
+    mvn clean install install
     
 Pre-requisites:
   - mvnvm
-    `$ brew install mvnvm`
+    
+    $ brew install mvnvm
 
 To run this project from within Maven use
 
-    `mvn -Denv=development -DredboxApiConfig=<path to your config> exec:java`
+    mvn -Denv=development -DredboxApiConfig=<path to your config> exec:java
