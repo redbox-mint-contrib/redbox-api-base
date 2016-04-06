@@ -26,7 +26,15 @@ This is a wrapper to Camel's RouteBuilder, that allows for configurable and scri
 
 #Deployment
 
-Deployment options: as war file or as a fat jar. Tested with Tomcat 8. Tomcat 7 not supported.
+Deployment options: as war file or as a fat jar. Tested with Tomcat 8. Tomcat 7 not supported. 
+
+## As a Jar
+
+Run like so `java -Denv=<Environment> -DredboxApiConfig=<Path to Config> -jar <Path to your WAR File>`
+
+##Snapshots
+
+[WAR Snapshots download here](http://dev.redboxresearchdata.com.au/nexus/service/local/artifact/maven/redirect?r=snapshots&g=au.com.redboxresearchdata.redbox&a=redbox-api-base&v=LATEST&e=war)
 
 #Building
 
