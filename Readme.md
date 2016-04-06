@@ -1,5 +1,6 @@
-ReDBox Base API Framework Using Camel
+ReDBox Base API Framework Using Camel 
 ===========================
+[![Build Status](https://travis-ci.org/redbox-mint-contrib/redbox-api-base.svg?branch=master)](https://travis-ci.org/redbox-mint-contrib/redbox-api-base)
 
 #Intro
 This is a wrapper to Camel's RouteBuilder, that allows for configurable and scripted routes. No more building, just download  the war/jar and point it to your configuration.
