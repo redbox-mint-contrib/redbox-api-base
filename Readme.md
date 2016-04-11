@@ -50,3 +50,10 @@ Pre-requisites:
 To run this project from within Maven use
 
     mvn -Denv=development -DredboxApiConfig=<path to your config> exec:java
+    
+#Logging
+
+To enable debug logging regardless of the configuration environment, either:
+
+- When running from command line, add `--spring.profiles.active=debug` parameter
+- When running from a container (Tomcat), either add the `spring.profiles.active=debug` system property or `SPRING_PROFILES_ACTIVE=debug` OS environment variable.
